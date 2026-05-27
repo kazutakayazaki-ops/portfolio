@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>資料｜矢崎和貴｜Webマーケティング ポートフォリオ</title>
+  <meta name="description" content="矢崎和貴の資料ページです。履歴書、職務経歴書、ポートフォリオPDF、関連資料、関連リンクをまとめています。">
+
+  <link rel="icon" type="image/png" href="img/00-02.favicon.png">
+  <link rel="apple-touch-icon" href="img/00-02.favicon.png">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="resources-page">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-logo">
+        <a href="index.html" aria-label="トップページへ戻る">
+          <img src="img/00-01.logo.png" alt="矢崎和貴のポートフォリオ">
+        </a>
+      </h1>
+
+      <button class="hamburger-button" type="button" aria-label="メニューを開く" aria-controls="global-nav"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="global-nav" class="global-nav" aria-label="グローバルナビゲーション">
+        <ul>
+          <li><a href="index.html">Top</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <p class="section-label">Documents and links</p>
+        <h2>資料</h2>
+        <p class="section-description">
+          履歴書・職務経歴書・ポートフォリオなどの資料ダウンロードと、個人で運用しているSNS・関連リンクをまとめています。
+        </p>
+      </div>
+    </section>
+
+    <section class="section documents">
+      <div class="section-inner">
+        <div class="documents-layout">
+
+          <div class="documents-box">
+            <h3>資料</h3>
+
+            <div class="document-list">
+              <a href="pdf/downloadpdf-01.pdf" class="document-item" target="_blank" rel="noopener noreferrer">
+                <span class="document-title">01.履歴書（志望動機未記入）</span>
+                <span class="document-meta">Open PDF</span>
+              </a>
+
+              <a href="pdf/downloadpdf-02.pdf" class="document-item" target="_blank" rel="noopener noreferrer">
+                <span class="document-title">02.職務経歴書</span>
+                <span class="document-meta">Open PDF</span>
+              </a>
+
+              <a href="pdf/downloadpdf-03.pdf" class="document-item" target="_blank" rel="noopener noreferrer">
+                <span class="document-title">03.ポートフォリオPDF</span>
+                <span class="document-meta">Open PDF</span>
+              </a>
+
+              <a href="pdf/08-04.strategic-proposal.pdf" class="document-item" target="_blank"
+                rel="noopener noreferrer">
+                <span class="document-title">04.職業訓練課題01（戦略提案書）</span>
+                <span class="document-meta">Open PDF</span>
+              </a>
+
+              <a href="pdf/08-05.marketing-report.pdf" class="document-item" target="_blank" rel="noopener noreferrer">
+                <span class="document-title">05.職業訓練課題02（マーケティングレポート）</span>
+                <span class="document-meta">Open PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="documents-box">
+            <h3>リンク</h3>
+
+            <div class="link-list">
+              <a href="https://www.google.com/?hl=ja" class="link-item" target="_blank" rel="noopener noreferrer">
+                <span class="link-title">01.</span>
+                <span class="link-meta">External Link</span>
+              </a>
+
+              <a href="https://www.google.com/?hl=ja" class="link-item" target="_blank" rel="noopener noreferrer">
+                <span class="link-title">02.</span>
+                <span class="link-meta">External Link</span>
+              </a>
+
+              <a href="https://gotojuku.jp/" class="link-item" target="_blank" rel="noopener noreferrer">
+                <span class="link-title">03.職業訓練校（後藤企画）</span>
+                <span class="link-meta">External Link</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Kazutaka Yazaki. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const globalNav = document.querySelector('.global-nav');
+    const navLinks = document.querySelectorAll('.global-nav a');
+
+    hamburgerButton.addEventListener('click', function () {
+      hamburgerButton.classList.toggle('is-active');
+      globalNav.classList.toggle('is-active');
+
+      const isExpanded = hamburgerButton.classList.contains('is-active');
+      hamburgerButton.setAttribute('aria-expanded', isExpanded);
+    });
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburgerButton.classList.remove('is-active');
+        globalNav.classList.remove('is-active');
+        hamburgerButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
